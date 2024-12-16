@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Top Header Bar */
+.top-bar {
+    background-color: #38A0B3;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar img {
+    width: 25px;
+    height: 25px;
+}
+
+.search-bar {
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* Grid Menu */
+.grid-menu {
+    display: flex; /* Use flexbox for better responsiveness */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px;
+}
+
+.menu-item {
+    flex: 1 1 calc(48%); /* Make each menu item take up nearly half the width */
+    background-color: #E6F7FF;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Increase font size for better visibility */
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.menu-item img {
+    width: 50px; /* Increase icon size */
+    margin-bottom: 10px;
+}
+
+/* Near Me Section */
+.section-title {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.near-me {
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.near-me p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    .menu-item {
+        flex: 1 1 100%; /* Make each menu item take full width */
+        padding: 15px; /* Increase padding for better touch targets */
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    .bottom-nav {
+        flex-direction: row; /* Ensure bottom nav items are in a row */
+        justify-content: space-around; /* Space items evenly */
+    }
+
+    .bottom-nav-item {
+        flex: 1; /* Allow items to grow equally */
+        text-align: center; /* Center text */
+    }
+}
+
+.bottom-nav-item {
+    text-align: center;
+    font-size: 12px;
+}
+
+.bottom-nav-item img {
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Top Header Bar */
+.top-bar {
+    background-color: #38A0B3;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar img {
+    width: 25px;
+    height: 25px;
+}
+
+.search-bar {
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* Grid Menu */
+.grid-menu {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 15px;
+    padding: 20px;
+}
+
+.menu-item {
+    flex: 1 1 calc(50% - 15px); /* Two items per row for the first row */
+    background-color: #E6F7FF;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.menu-item img {
+    width: 50px; /* Increase icon size */
+    margin-bottom: 10px;
+}
+
+/* Ensure the first two items are in the first row */
+.grid-menu .menu-item:nth-child(1),
+.grid-menu .menu-item:nth-child(2) {
+    flex: 1 1 calc(50% - 15px); /* Each takes half of the row */
+}
+
+/* Ensure the next four items are in the second row */
+.grid-menu .menu-item:nth-child(n+3) {
+    flex: 1 1 calc(25% - 15px); /* Each takes a quarter of the row */
+}
+
+/* Near Me Section */
+.section-title {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.near-me {
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.near-me p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav-item {
+    text-align: center;
+    font-size: 12px;
+}
+
+.bottom-nav-item img {
+    width: 25px;
+    margin-bottom: 5px;
+}

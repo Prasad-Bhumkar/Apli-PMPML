@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMPML Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Hide address bar on load and request full-screen mode
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                // Request full-screen mode
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                    document.documentElement.msRequestFullscreen();
+                }
+                window.scrollTo(0, 1);
+            }, 100); // Increased timeout for better reliability
+        }); // Closing brace for the load event listener
+
+        // Additional event listener for orientation change
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 100);
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="top-bar">
+        <img src="images/logo.png" alt="PMPML Logo">
+        <div class="search-bar">
+        <img src="images/search-icon.png" alt="Search">
+            <input type="text" placeholder="कुठे जायचे आहे?">
+        </div>
+        <img src="images/notification-icon.png" alt="Notification">
+    </div>
+
+    <!-- Grid Menu -->
+    <div class="grid-menu">
+        <div class="menu-item">
+            <img src="images/Bus Ticket.png" alt="Bus Ticket" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Bus Ticket</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Daily Pass.png" alt="Daily Pass" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Daily Pass</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/View Ticket.png" alt="View Ticket" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">View Ticket</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/View Pass.png" alt="View Pass" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">View Pass</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Route Timetable.png" alt="Route Timetable" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Route Timetable</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Metro Ticket.png" alt="Metro Ticket" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Metro Ticket</div>
+        </div>
+    </div>
+
+    <!-- Near Me Section -->
+    <div class="section-title">Near Me</div>
+    <div class="near-me">
+        <p><b>Limb Center Bus Stop</b> - 133 m</p>
+        <p>No upcoming buses at this stop.</p>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="bottom-nav-item">
+            <img src="images/home-icon.png" alt="Home" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Home</div>
+        </div>
+        <div class="bottom-nav-item">
+            <img src="images/buses-icon.png" alt="Buses" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Buses</div>
+        </div>
+        <div class="bottom-nav-item">
+            <img src="images/help-icon.png" alt="Help" style="width: 100%; height: auto;">
+            <div style="margin-top: 5px; text-align: center;">Help</div>
+        </div>
+    </div>
+
+</body>
+</html>
